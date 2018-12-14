@@ -1,0 +1,55 @@
+{% load static %}
+
+{#/* HTML帳票の開発は以下のリンクを参照 */#}
+{##}
+{#/* Qiita:そろそろ真面目に、HTMLで帳票を描く話をしようか */#}
+{#/* https://qiita.com/cognitom/items/d39d5f19054c8c8fd592 */#}
+{#/* Qiita:紙の帳票からHTML帳票を作る方法 */#}
+{#/* https://qiita.com/okoppe8/items/45e7b37774899e763d31 */#}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>印刷画面</title>
+    <link href="{% static "sample/css/print.css" %}" rel="stylesheet">
+</head>
+<body class="A4">
+<section class="sheet">
+<div class="flex">
+
+{% for item in object_list  %}
+<div class="cell">
+<p class="zipcode">{{ item.zipcode }}</p>
+<p class="pref_name">{{ item.pref_name }}</p>
+<p class="address">{{ item.address }}</p>
+<p class="name">{{ item.name }} 御中</p>
+</div>
+{# 用紙1枚毎に単票が12枚 #}
+{% if forloop.counter|divisibleby:"12" and not forloop.last %}
+</div>
+</section>
+<section class="sheet">
+<div class="flex">
+{% endif %}
+
+{% endfor %}
+</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        // 印刷画面を自動的に表示。印刷実行かキャンセルでウィンドウも閉じる。
+        setTimeout(function () {
+            window.print();
+            window.close();
+        }, 200);
+    })
+
+</script>
+</body>
+</html>

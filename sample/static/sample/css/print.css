@@ -1,0 +1,105 @@
+/* 印刷用メディアクエリ */
+@page {
+    size: A4; /* 用紙サイズ */
+    margin: 0; /* ヘッダー・フッダーを無効化（Chromeのみで有効） */
+}
+
+/* 画面メディアクエリ（開発時に印刷イメージとして使う） */
+@media screen {
+    body {
+        background: #e0e0e0;
+    }
+
+    .sheet {
+        background: white; /* 背景を白く */
+        box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3); /* ドロップシャドウ */
+        margin: 5mm auto;
+    }
+}
+
+/* 全要素の初期化 */
+* {
+    /* マージン・パディングをリセット */
+    margin: 0;
+    padding: 0;
+    /* フォント */
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
+    sans-serif;
+    font-size: 11pt;
+    font-weight: normal;
+    /* 背景色・背景画像を印刷する（Chromeのみで有効） */
+    -webkit-print-color-adjust: exact;
+}
+
+/* リスト表示 初期化 */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* ページレイアウト (section.sheetが１ページになる) */
+.sheet {
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    page-break-after: always;
+
+    /* 用紙サイズ A4 */
+    height: 297mm;
+    width: 210mm;
+
+    /* 余白サイズ */
+    padding-top: 21.2mm;
+    padding-left: 18.6mm;
+    padding-right: 18.6mm;
+}
+
+/* １ページに複数の単票を作る際はflexboxが有効である。 */
+div.flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 大きさを固定した単票をflexboxに流し込む */
+/* Qiita:要素を横並びにするならflex boxしかない！ */
+/* https://qiita.com/HiromuMasuda0228/items/baf8015076d7d90b8fea */
+div.cell {
+    position: relative;
+    width: 86.4mm;
+    height: 42.3mm;
+}
+
+/* 項目の場所は単票の左上からの距離で指定する */
+div.cell p.zipcode {
+    position: absolute;
+    font-size: 11pt;
+    top: 5mm;
+    left: 5mm;
+}
+
+div.cell p.pref_name {
+    position: absolute;
+    width: 80.0mm;
+    font-size: 11pt;
+    top: 12mm;
+    left: 5mm;
+}
+
+div.cell p.address {
+    position: absolute;
+    width: 80.0mm;
+    font-size: 11pt;
+    top: 18mm;
+    left: 5mm;
+}
+
+div.cell p.name {
+    position: absolute;
+    font-size: 14pt;
+    top: 27.0mm;
+    left: 5mm;
+}
