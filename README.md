@@ -18,6 +18,8 @@ git clonet https://github.com/okoppe8/django-datatables-view-sample.git
 
 ３．セットアップコマンドを実行する
 
+windows
+
 ```
 cd django-datatables-view-sample
 python -m venv env
@@ -26,6 +28,8 @@ pip install -r requirements.txt
 manage.py migrate
 manage.py runserver
 ```
+
+MacOS/Linux
 
 ```
 cd django-datatables-view-sample
