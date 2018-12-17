@@ -144,6 +144,14 @@ $(document).ready(function () {
         $('#selected').html(selected.join(','));
     });
 
+    // サンプル：クリックしたレコードのデータを取得
+    // data()でセル、行、表示中のテーブル全体のデータを取得可能
+    // https://datatables.net/reference/api/row().data()
+
+    $('#datatable tbody').on('click', 'tr', function () {
+        console.log(table.row(this).data());
+    });
+
     // 全選択を解除
     $('#clear').on('click', function () {
         selected = [];
