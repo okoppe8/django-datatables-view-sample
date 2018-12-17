@@ -16,7 +16,7 @@ git clone https://github.com/okoppe8/django-datatables-view-sample.git
 
 ※ gitがない場合は左上の「Clone or Download」→ 「Download ZIP」でもOK
 
-３．セットアップコマンドを実行する
+３．ターミナルよりセットアップコマンドを実行する
 
 windows
 
