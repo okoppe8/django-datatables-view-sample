@@ -38,7 +38,7 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-４．開発用サービスを立ち上げてURLを開く
+４．開発用サービスを立ち上げてブラウザからURLを開く
 
 windows
 
