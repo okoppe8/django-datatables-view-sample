@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>アプリケーション名</title>
+    <title>地方自治体一覧</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -40,9 +40,9 @@
     <div class="mt-3 mb-3">
         <div>選択中のデータ：<span id="selected"></span></div>
         <button id="clear" type="button" class="btn-lg btn-secondary mr-3">選択を解除</button>
-        <button id="print" type="button" class="btn-lg btn-primary report" >印刷</button>
-        <button id="excel" type="button" class="btn-lg btn-primary report" >Excel</button>
-        <button id="csv" type="button" class="btn-lg btn-primary report" >CSV</button>
+        <button id="print" type="button" class="btn-lg btn-primary report">印刷</button>
+        <button id="excel" type="button" class="btn-lg btn-primary report">Excel</button>
+        <button id="csv" type="button" class="btn-lg btn-primary report">CSV</button>
     </div>
 </div>
 <form id="form">
@@ -51,6 +51,7 @@
 
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <script src="{% static "sample/js/sample.js" %}"></script>
