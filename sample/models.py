@@ -10,7 +10,7 @@ class Item(models.Model):
 
     # 市町村名
     name = models.CharField(
-        max_length=10,
+        max_length=15,
     )
 
     # ふりがな
@@ -20,7 +20,7 @@ class Item(models.Model):
 
     # 郵便番号
     zipcode = models.CharField(
-        max_length=7,
+        max_length=8,
     )
 
     # 住所
@@ -30,7 +30,7 @@ class Item(models.Model):
 
     # 電話番号
     tel = models.CharField(
-        max_length=12,
+        max_length=13,
     )
 
     # 自治体コード

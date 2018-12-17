@@ -16,11 +16,11 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('pref_name', models.CharField(max_length=4)),
-                ('name', models.CharField(max_length=10)),
+                ('name', models.CharField(max_length=15)),
                 ('furigana', models.CharField(max_length=30)),
-                ('zipcode', models.CharField(max_length=7)),
+                ('zipcode', models.CharField(max_length=8)),
                 ('address', models.CharField(max_length=100)),
-                ('tel', models.CharField(max_length=12)),
+                ('tel', models.CharField(max_length=13)),
                 ('code', models.CharField(max_length=6)),
             ],
             options={
