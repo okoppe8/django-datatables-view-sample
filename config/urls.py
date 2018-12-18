@@ -22,6 +22,6 @@ urlpatterns = [
     path('', include('sample.urls')),
 ]
 
-# イタズラ防止のため、デモ環境では管理画面を無効としています。
-if settings.ADMIN_ENABLED:
-    urlpatterns += path('admin/', admin.site.urls)
+# イタズラ防止のため管理画面は開発環境のみで有効とします。
+if settings.DEBUG:
+    urlpatterns += [path('admin/', admin.site.urls)]
