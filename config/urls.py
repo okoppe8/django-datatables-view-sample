@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from config import settings
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('sample.urls')),
 ]
+
+# イタズラ防止のため、デモ環境では管理画面を無効としています。
+if settings.ADMIN_ENABLED:
+    urlpatterns += path('admin/', admin.site.urls)
