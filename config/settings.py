@@ -154,6 +154,9 @@ LOGGING = {
 
 ADMIN_ENABLED = True
 
+# Heroku 用の設定
+# Herokuのインスタンス管理用の環境変数'DYNO'を利用し, Herokuだけで動作する
 if 'DYNO' in os.environ:
+    DEBUG = False
     ADMIN_ENABLED = False
     django_heroku.settings(locals())
