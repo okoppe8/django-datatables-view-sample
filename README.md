@@ -2,7 +2,7 @@
 
 [django-datatables-view](https://pypi.org/project/django-datatables-view/)を実際に動かして試せるサンプルアプリです。
 
-解説：（QiitaのURL）
+解説：https://qiita.com/okoppe8/items/002aee6fdb03e9eadc92
 
 # 使い方
 
