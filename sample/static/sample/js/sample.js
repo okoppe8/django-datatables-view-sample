@@ -104,9 +104,10 @@ $(document).ready(function () {
             {
                 // 6列目
                 title: "住所",
-                // ハイパーリンク追加のサンプル
-                render: function (data) {
-                    return '<a target="_blank" href="https://maps.google.co.jp/maps?q=' + data + '">' + data + '</a>';
+                // googleマップへのリンク
+                // http://www.shurey.com/html/googlemaps.html
+                render: function (data, type, row) {
+                    return '<a target="_blank" href="https://maps.google.co.jp/maps?q=' + row[1] + data + '">' + data + '</a>';
                 },
             },
             {
