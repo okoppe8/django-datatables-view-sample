@@ -104,6 +104,10 @@ $(document).ready(function () {
             {
                 // 6列目
                 title: "住所",
+                // ハイパーリンク追加のサンプル
+                render: function (data) {
+                    return '<a target="_blank" href="https://maps.google.co.jp/maps/search/' + data + '">' + data + '</a>';
+                },
             },
             {
                 // 7列目
