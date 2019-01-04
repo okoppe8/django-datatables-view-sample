@@ -106,7 +106,7 @@ $(document).ready(function () {
                 title: "住所",
                 // ハイパーリンク追加のサンプル
                 render: function (data) {
-                    return '<a target="_blank" href="https://maps.google.co.jp/maps/search/' + data + '">' + data + '</a>';
+                    return '<a target="_blank" href="https://maps.google.co.jp/maps?q=' + data + '">' + data + '</a>';
                 },
             },
             {
