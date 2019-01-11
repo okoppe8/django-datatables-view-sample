@@ -151,6 +151,7 @@ $(document).ready(function () {
     $(document).on("click", "button.popup", function () {
 
         // フォームの初期化
+        $("input#id_id").val("");
         $("form#form")[0].reset();
         $("form#form").find("input")
             .removeClass("is-invalid")
