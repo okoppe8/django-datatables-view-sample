@@ -20,6 +20,7 @@ from config import settings
 
 urlpatterns = [
     path('', include('sample.urls')),
+    path('todo/', include('todo.urls')),
 ]
 
 # イタズラ防止のため管理画面は開発環境のみで有効とします。
