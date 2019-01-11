@@ -10,10 +10,12 @@
 <body>
 <h3>Django-Datatables-View サンプル</h3>
 <ul>
-    <li><a href="{% url 'sample01' %}">サンプル１：ＰＣ用</a></li>
+    <li><a href="{% url 'sample:sample01' %}">サンプル１：ＰＣ用</a></li>
     <div>チェックボックスによる行の選択。Excel出力, CSV出力, 印刷機能。</div>
-    <li><a href="{% url 'sample02' %}">サンプル２：モバイル用</a></li>
+    <li><a href="{% url 'sample:sample02' %}">サンプル２：モバイル用</a></li>
     <div>レスポンシブ対応。</div>
+    <li><a href="{% url 'todo:index' %}">サンプル３：タスク管理ツール</a></li>
+    <div>データ編集画面を追加したサンプルアプリ</div>
 </ul>
 </body>
 </html>

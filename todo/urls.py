@@ -7,6 +7,8 @@ from .views import TaskViewSet
 router = routers.DefaultRouter()
 router.register(r'tasks', TaskViewSet)
 
+app_name = 'todo'
+
 urlpatterns = [
     path('', views.MainView.as_view(), name='index'),
     path('api/datatables', views.TasksJsonView.as_view(), name='TasksJson'),
